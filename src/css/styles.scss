@@ -21,6 +21,7 @@ body {
     &__input {
       width: 100%;
       color: #fff;
+      background-color: #65c4ae;
       font-size: 20px;
       border: none;
       border-radius: 14px 40px 40px 14px;
@@ -71,7 +72,6 @@ body {
         font-size: 44px;
         color: #cbd5d2;
         padding-right: 18px;
-        padding-bottom: 4px;
         border-right: 1px solid #cbd5d2;
         &:hover {
           color: #f00;
@@ -80,11 +80,12 @@ body {
       }
       &--check {
         display: flex;
-        font-size: 38px;
+        font-size: 32px;
         color: #19ba99;
         justify-content: space-around;
         align-items: center;
         margin-left: 14px;
+        margin-top: 4px;
         padding-left: 2px;
         border-radius: 14px;
       }
@@ -92,12 +93,10 @@ body {
   }
 }
 
-.todoApp__list__item--checked {
+.todoApp__list__item--checked span {
+  display: inline-block;
+  position: relative;
+  color: #000;
   text-decoration: line-through;
   text-decoration-color: #19ba99;
-  .text {
-    display: inline-block;
-    position: relative;
-    color: #000;
-  }
 }
