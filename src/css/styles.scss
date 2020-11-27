@@ -1,0 +1,103 @@
+@use './base/reset';
+@use './base/utilities';
+@import url("./icons/style.css");
+
+body {
+  background-color: #eef3f6;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.todoApp {
+  width: 540px;
+  margin: 40px auto;
+  &__form {
+    display: flex;
+    background-color: #19ba99;
+    border-radius: 14px;
+    padding: 20px;
+    text-decoration: none;
+    box-shadow: 4px 4px 8px 0px #cbd5d2;
+    &__input {
+      width: 100%;
+      color: #fff;
+      font-size: 20px;
+      border: none;
+      border-radius: 14px 40px 40px 14px;
+      margin-right: -60px;
+      padding-right: 80px;
+      padding-left: 24px;
+      &::placeholder {
+        color: #fff;
+        opacity: 0.4;
+      }
+      &--error {
+        background-color: #f00;
+        outline: none;
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+    &__button {
+      display: flex;
+      color: #19ba99;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 65px;
+      height: 65px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__list {
+    padding: 18px;
+    &__item {
+      display: flex;
+      background-color: #fff;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      padding: 24px;
+      align-items: center;
+      box-shadow: 4px 4px 8px 0px #cbd5d2;
+      .text {
+        margin-right: auto;
+      }
+    }
+    a.icon {
+      display: flex;
+      align-items: center;
+      &--remove {
+        font-size: 44px;
+        color: #cbd5d2;
+        padding-right: 18px;
+        padding-bottom: 4px;
+        border-right: 1px solid #cbd5d2;
+        &:hover {
+          color: #f00;
+          transition: 800ms;
+        }
+      }
+      &--check {
+        display: flex;
+        font-size: 38px;
+        color: #19ba99;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 14px;
+        padding-left: 2px;
+        border-radius: 14px;
+      }
+    }
+  }
+}
+
+.todoApp__list__item--checked {
+  text-decoration: line-through;
+  text-decoration-color: #19ba99;
+  .text {
+    display: inline-block;
+    position: relative;
+    color: #000;
+  }
+}
