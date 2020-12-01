@@ -28,17 +28,17 @@ body {
       margin-right: -60px;
       padding-right: 80px;
       padding-left: 24px;
+      outline: none;
       &::placeholder {
         color: #fff;
         opacity: 0.4;
       }
-      &--error {
-        background-color: #f00;
-        outline: none;
-        &::placeholder {
-          color: #fff;
-        }
-      }
+      // &--error {
+      //   background-color: #f00;
+      //   &::placeholder {
+      //     color: #fff;
+      //   }
+      // }
     }
     &__button {
       display: flex;
